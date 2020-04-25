@@ -22,6 +22,13 @@
   border-bottom-left-radius: 500px;
   -webkit-animation: anim-jelly 0.8s linear forwards;
   animation: anim-jelly 0.8s linear forwards;
+
+  @include media-query($on-palm) {
+    width: 400px;
+    height: 400px;
+    -moz-border-bottom-left-radius: 400px;
+    border-bottom-left-radius: 400px;
+  }
 }
 
 .menu-wrapper {
@@ -39,6 +46,11 @@
   transform-origin: 100% 0%;
   -moz-border-bottom-left-radius: 500px;
   border-bottom-left-radius: 500px;
+
+  @include media-query($on-palm) {
+    -moz-border-bottom-left-radius: 400px;
+    border-bottom-left-radius: 400px;
+  }
 }
 
 // menu list
@@ -56,5 +68,12 @@
       color: #ffffff;
       text-decoration: none;
     }
+  }
+
+  @include media-query($on-palm) {
+    font-size: 22px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    padding-top: 65px;
   }
 }
