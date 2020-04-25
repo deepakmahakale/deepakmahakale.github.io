@@ -1,0 +1,60 @@
+// button
+.menu-button {
+  z-index: 9999999999;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  button:focus {outline: 0;}
+}
+
+// button border
+.hamburger {
+  width: 55px;
+  height: 55px;
+  border-radius: 28px;
+}
+
+// wrapper
+.show-menu .menu-wrapper {
+  width: 500px;
+  height: 500px;
+  -moz-border-bottom-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+  -webkit-animation: anim-jelly 0.8s linear forwards;
+  animation: anim-jelly 0.8s linear forwards;
+}
+
+.menu-wrapper {
+  position: fixed;
+  z-index: 999999999;
+  background-color: #009FAA;
+  -webkit-transition: width 0.3s, height 0.3s;
+  transition: width 0.3s, height 0.3s;
+  width: 0;
+  height: 0;
+  font-size: 1.5em;
+  top: 0px;
+  right: 0px;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+  -moz-border-bottom-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+
+// menu list
+.list-items {
+  font-size: 24px;
+  line-height: 45px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  padding-top: 90px;
+  padding-left: 20%;
+  text-align: center;
+  a {
+    color: #ffffff;
+    &:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+}

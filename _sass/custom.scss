@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+$base-font-family: 'Open Sans', sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 22px;
+$spacing-unit:     30px;
+
+// global
+$text-color:       #292832;
+$background-color: #FFF;
+$brand-color:      #00C0CA;
+
+// bottom
+$bottom-text-color: #aaaaaa;
+$bottom-background-color: #444957;
+
+// footer
+$blue-color:      #00C0CA;
+$link-hover:       #FF664C;
+$footer-text-color: #ffffff;
+$footer-background-color: #2C3039;
+
+$hamburger-background-color: #009FAA;
+$hamburger-layer-color: #FFF;
+$hamburger-layer-width: 23px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 5px;
+$hamburger-layer-border-radius: 0px;
+$hamburger-inner-top: 3.5px;
+$hamburger-hover-opacity: 1.0;
+
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "custom/base",
+  "custom/layout",
+  "custom/menu",
+  "custom/effects",
+  "hamburgers/hamburgers";
+;

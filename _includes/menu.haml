@@ -1,0 +1,32 @@
+.menu-button
+
+  %button.hamburger.hamburger--spring{type: 'button'}
+    %span.hamburger-box
+      %span.hamburger-inner
+
+:javascript
+  var hamburger = document.querySelector('.hamburger');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('is-active');
+    document.body.classList.toggle('show-menu');
+
+  });
+
+.menu-wrapper
+  %nav.menu
+    .list-items.uppercase
+      %a.underline-effect{href: '#'}
+        %span Home
+      %br
+      %a.underline-effect{href: '#'}
+        %span Blogs
+      %br
+      %a.underline-effect{href: '#'}
+        %span Projects
+      %br
+      %a.underline-effect{href: '#'}
+        %span Resume
+      %br
+      %a.underline-effect{href: '#'}
+        %span Contact

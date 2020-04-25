@@ -1,0 +1,157 @@
+// header
+.site-header {
+  background-color: #eeeeee;
+  padding: 70px 0px 155px 0px;
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .banner-text {
+    text-align: center;
+    margin: 55px auto 25px auto;
+    color: #4c5365;
+  }
+}
+
+// page-content
+
+.page-content {
+  padding: 60px 0;
+}
+
+// bottom
+.bottom {
+  padding: 60px 20px;
+  background: $bottom-background-color;
+  color: $bottom-text-color;
+  .divider {
+    width: 40px;
+    border-top: 1px solid #ffffff;
+    height: 20px;
+    margin-top: 15px;
+  }
+  .contact {
+    a {
+      color: $bottom-text-color;
+    }
+    .social {
+      float: left;
+      width: 50%;
+    }
+    .work {
+      float: left;
+      width: 50%;
+    }
+  }
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-style: normal;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #fee97e;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 200;
+  font-style: normal;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 200;
+  font-style: normal;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h6 {
+  font-size: 23px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-style: normal;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: $blue-color;
+}
+
+// content
+
+.check-out-blog {
+  text-align: center;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// footer
+.footer-links {
+  a {
+    color: $footer-text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}
+
+.site-footer {
+  padding: 30px 0px 30px 0px;
+  background-color: $footer-background-color;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: $footer-text-color;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      padding: 0 0 0 10px;
+    }
+    li:not(:first-child):not(:last-child):before {
+      margin-right: 10px;
+      content: "•";
+    }
+  }
+  .copyright {
+    padding-left: 20px;
+    color: $blue-color;
+  }
+}
