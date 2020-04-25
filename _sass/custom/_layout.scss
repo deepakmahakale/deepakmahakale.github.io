@@ -1,7 +1,7 @@
 // header
 .site-header {
   background-color: #eeeeee;
-  padding: 70px 0px 155px 0px;
+  padding: 70px 0 155px;
   h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
@@ -12,6 +12,18 @@
     text-align: center;
     margin: 55px auto 25px auto;
     color: #4c5365;
+  }
+}
+
+.page-header {
+  background-color: #eeeeee;
+  padding: 20px 0 15px;
+  color: #4c5365;
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 38px;
   }
 }
 
