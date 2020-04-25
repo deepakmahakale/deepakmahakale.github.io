@@ -5,8 +5,8 @@
 
   <body>
 
-    {%- haml menu.haml -%}
-    {%- haml header.haml -%}
+    {%- include menu.haml -%}
+    {%- include header.haml -%}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -14,8 +14,8 @@
       </div>
     </main>
 
-    {%- haml bottom.haml -%}
-    {%- haml footer.haml -%}
+    {%- include bottom.haml -%}
+    {%- include footer.haml -%}
 
   </body>
 
