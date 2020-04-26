@@ -55,7 +55,7 @@
           \ · {{ tweet.created_at | date: "%b %d, %y" }}
           %br
           %br
-          {{ tweet.text }}
+          {{ tweet.text | truncate: 130, '...' }}
           %br
           \ [
           %a{href: "{{tweet.url}}", target: :_blank, onclick:"window.open('{{tweet.url}}','popup','width=600,height=600'); return false;" } Link
