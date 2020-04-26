@@ -12,6 +12,8 @@ $spacing-unit:     30px;
 $text-color:       #292832;
 $background-color: #FFF;
 $brand-color:      #00C0CA;
+$border-color-01:   #00C0CA;
+$border-color-02:       lighten($brand-color, 35%) !default;
 
 // bottom
 $bottom-text-color: #aaaaaa;
@@ -55,5 +57,7 @@ $on-laptop:        800px !default;
   "custom/layout",
   "custom/menu",
   "custom/effects",
+  "custom/about",
+  "custom/social",
   "hamburgers/hamburgers";
 ;

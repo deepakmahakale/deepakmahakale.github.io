@@ -1,0 +1,30 @@
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+  display: none;
+  margin: 0 auto;
+  justify-content: space-between;
+  // flex-flow: row wrap;
+
+  @include media-query($on-palm) {
+    display: flex;
+  }
+  li {
+    a {
+      display: block;
+      padding: $spacing-unit / 4;
+      border: 1px solid currentColor;
+      border-radius: 19.5px;
+    }
+  }
+}
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: currentColor;
+  padding: 3px;
+  vertical-align: text-bottom;
+}
+
