@@ -5,6 +5,9 @@
   {%- seo -%}
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700|Open+Sans:400,400i,600" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+
+  {%- include page-javascripts.html -%}
+
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.haml -%}
