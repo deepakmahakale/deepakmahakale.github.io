@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Facebook Birthday Export",
+        "url": "https://github.com/deepakmahakale/facebook_birthday_export",
+        "image": {
+            "alt": "Facebook Birthday Export",
+            "url": "https://picsum.photos/id/0/300/200"
+        },
+        "overlay": {
+            "title": "Facebook Birthday Export",
+            "sub_title": "Python script to parse birthdays from Facebook HTML and generate a CSV. The CSV can be later imported in Google calendar"
+        }
+    },
+    {
+        "title": "Spree Purchase Order",
+        "url": "https://rubygems.org/gems/spree_purchase_order",
+        "image": {
+            "alt": "Spree Purchase Order",
+            "url": "https://picsum.photos/id/0/300/200"
+        },
+        "overlay": {
+            "title": "Spree Purchase Order",
+            "sub_title": "Ruby gem to add Purchase Order as payment method in Spree"
+        }
+    },
+    {
+        "title": "Social Birthday Export",
+        "url": "https://chrome.google.com/webstore/detail/social-birthdays-export/enpcedkgdcblopaldlgcajgebojbnhao",
+        "image": {
+            "alt": "Social Birthday Export",
+            "url": "https://picsum.photos/id/0/300/200"
+        },
+        "overlay": {
+            "title": "Social Birthday Export",
+            "sub_title": "Google Chrome extension to parse birthdays from Facebook and generate a CSV. The CSV can be later imported in Google calendar"
+        }
+    }
+]
