@@ -1,0 +1,74 @@
+.projects-wrapper {
+  .box {
+    width: 47%;
+    float: left;
+    margin: 0px 1.25% 30px 1.25%;
+    color: #999999;
+    // font-size: 13px;
+    // line-height: 17px;
+    // font-style: italic;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(1,1,1,.2);
+    -webkit-font-smoothing: antialiased;
+    @include media-query($on-palm) {
+      width: inherit;
+      float: none;
+    }
+  }
+
+  .box-image {
+    position: relative;
+  }
+
+  .box-title{
+    position: relative;
+    padding: 13px 10px;
+    box-sizing: border-box;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #444957;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .box-image:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    a {
+      color: white;
+      display: block;
+    }
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    width: 100%;
+  }
+  .sub-text {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 40%;
+    padding: 0 20px;
+  }
+}
