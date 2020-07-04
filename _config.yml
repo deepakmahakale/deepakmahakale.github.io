@@ -10,6 +10,8 @@ google_analytics: UA-86389306-2
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 social_links:
   facebook: deepakmahakale1
   github: deepakmahakale
