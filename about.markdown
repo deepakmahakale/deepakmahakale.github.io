@@ -6,7 +6,11 @@ javascripts: ["https://www.amcharts.com/lib/4/core.js",
               "https://www.amcharts.com/lib/4/charts.js",
               "https://www.amcharts.com/lib/4/plugins/wordCloud.js",
               "https://www.amcharts.com/lib/4/themes/animated.js"]
-
+description: >
+  Ruby on Rails dev with 5+ years of experience.
+  Senior Software Developer at Velotio.
+  Knows Spree Commerce, Postgres, MySQL, Capistrano, Elastic Search, Heroku, SendGrid, AWS, Azure and more.
+  Contributor to open source communities.
 ---
 
 <div id="chart-container" style="height: 600px; width:100%;" >
