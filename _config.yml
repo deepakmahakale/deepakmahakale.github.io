@@ -6,7 +6,7 @@ baseurl: ""
 url: "http://deepakmahakale.in"
 twitter_username: deepakmahakale
 github_username:  deepakmahakale
-google_analytics: UA-86389306-2
+google_tag_manager_id: GTM-WRTX84W
 
 plugins:
   - jekyll-feed

@@ -16,7 +16,7 @@
   {%- include page-javascripts.html -%}
 
   {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.haml -%}
+  {%- if jekyll.environment == 'production' and site.google_tag_manager_id -%}
+  {%- include google_tag_manager.html -%}
   {%- endif -%}
 </head>
