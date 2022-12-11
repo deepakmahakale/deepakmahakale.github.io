@@ -9,24 +9,24 @@ $base-line-height: 22px;
 $spacing-unit:     30px;
 
 // global
-$text-color:       #292832;
-$background-color: #FFF;
+$text-color:       #444957;
+$background-color: #fdfdfd;
 $brand-color:      #00C0CA;
 $border-color-01:   #00C0CA;
 $border-color-02:       lighten($brand-color, 35%) !default;
 
 // bottom
-$bottom-text-color: #aaaaaa;
+$bottom-text-color: #fcfffd;
 $bottom-background-color: #444957;
 
 // footer
 $blue-color:      #00C0CA;
 $link-hover:       #FF664C;
-$footer-text-color: #ffffff;
+$footer-text-color: #fdfdfd;
 $footer-background-color: #2C3039;
 
 $hamburger-background-color: #009FAA;
-$hamburger-layer-color: #FFF;
+$hamburger-layer-color: #fdfdfd;
 $hamburger-layer-width: 23px;
 $hamburger-layer-height: 3px;
 $hamburger-layer-spacing: 5px;
