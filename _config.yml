@@ -16,7 +16,7 @@ sass:
   style: compressed
 
 exclude:
-  - _sass/*
+  - _site/_sass/
 
 # SEO Stuff
 author:
