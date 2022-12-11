@@ -2,97 +2,70 @@
 layout: page
 title: About
 permalink: /about
-javascripts: ["https://www.amcharts.com/lib/4/core.js",
-              "https://www.amcharts.com/lib/4/charts.js",
-              "https://www.amcharts.com/lib/4/plugins/wordCloud.js",
-              "https://www.amcharts.com/lib/4/themes/animated.js"]
+javascripts:
+  [
+    'https://www.amcharts.com/lib/4/core.js',
+    'https://www.amcharts.com/lib/4/charts.js',
+    'https://www.amcharts.com/lib/4/plugins/wordCloud.js',
+    'https://www.amcharts.com/lib/4/themes/animated.js'
+  ]
 description: >
-  Ruby on Rails dev with 5+ years of experience.
-  Senior Software Developer at Velotio.
+  Software Professional with over 8 years of of experience in the software development industry.
+  Currently working with Saeloun Technologies Pvt. Ltd. Pune.
   Knows Spree Commerce, Postgres, MySQL, Capistrano, Elastic Search, Heroku, SendGrid, AWS, Azure and more.
-  Contributor to open source communities.
+  Active contributor to open source communities.
 ---
 
-<div id="chart-container" style="height: 600px; width:100%;" >
+<p>
+<strong>Deepak</strong>
+is a software professional with over
+<strong>8 years</strong>
+of experience in the software development industry.
+</p>
 
-<script>
-am4core.ready(function() {
+<p>
+He is currently working with
+<a href="https://www.saeloun.com/" class="orange" target='_blank'>Saeloun Technologies Pvt. Ltd.</a>
+and has previously worked with
+<a href="https://www.velotio.com/" class="orange" target='_blank'>Velotio Technologies Pvt. Ltd.</a>
+and
+<a href="https://www.webonise.com/" class="orange" target='_blank'>Webonise Lab.</a>
+</p>
 
-// Themes begin
-am4core.useTheme(am4themes_animated);
-// Themes end
+<p>
+In addition to his expertise in Ruby on Rails,
+Deepak also has knowledge of several other programming languages
+and
+technologies,
+including
+JavaScript,
+Bootstrap,
+HTML,
+HAML,
+Git,
+GitHub,
+Heroku,
+Spree Commerce,
+PostgreSQL,
+MySQL,
+and
+Linux.
+</p>
 
-var chart = am4core.create("chart-container", am4plugins_wordCloud.WordCloud);
-chart.fontFamily = "Courier New";
-var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
-series.randomness = 0.1;
-series.rotationThreshold = 0.5;
+<p>
+Deepak is an active open-source contributor
+and
+a respected member of the Stack Overflow community,
+with a reputation of over 21k.
+He has made significant contributions to Rails,
+Spree,
+and
+some well-known libraries.
+</p>
 
-series.data = [
-  { "tag": "Ruby", "rating": "100" },
-  { "tag": "Rails", "rating": "95" },
-  { "tag": "Python", "rating": "40" },
-  { "tag": "node", "rating": "42" },
-  { "tag": "botkit", "rating": "55" },
-  { "tag": "heroku", "rating": "88" },
-  { "tag": "git", "rating": "91" },
-  { "tag": "GitHub", "rating": "60" },
-  { "tag": "AWS", "rating": "59" },
-  { "tag": "LUIS", "rating": "39" },
-  { "tag": "jQuery", "rating": "49" },
-  { "tag": "JavaScript", "rating": "52" },
-  { "tag": "Bootstrap", "rating": "63" },
-  { "tag": "coffeeScript", "rating": "73" },
-  { "tag": "Travis CI", "rating": "83" },
-  { "tag": ".", "rating": "1" },
-];
-
-series.dataFields.word = "tag";
-series.dataFields.value = "rating";
-
-series.heatRules.push({
- "target": series.labels.template,
- "property": "fill",
- "min": am4core.color("#00ff00"),
- "max": am4core.color("#FF33FF"),
- "dataField": "value"
-});
-
-// series.labels.template.url = "https://stackoverflow.com/questions/tagged/{word}";
-// series.labels.template.urlTarget = "_blank";
-// series.labels.template.tooltipText = "{word}: {value}";
-
-// var hoverState = series.labels.template.states.create("hover");
-// hoverState.properties.fill = am4core.color("#FF0000");
-
-// var subtitle = chart.titles.create();
-// subtitle.text = "(click to open)";
-
-// var title = chart.titles.create();
-// title.text = "Most Popular Tags @ StackOverflow";
-// title.fontSize = 20;
-// title.fontWeight = "800";
-
-}); // end am4core.ready()
-
-</script>
-</div>
-<!--
-<h3>
-<strong>Deepak Mahakale</strong> has <strong>8+</strong> years of experience in the tech industry. 
-He is currently working with <strong>Saeloun Technologies</strong>.</h3>
-<h3>Deepak has previously worked with Velotio Technologies and Webonise Lab both companies situated in Pune.</h3>
-<h3>Deepak also knows about JavaScript, Bootstrap, HTML, HAML, Git, GitHub, Heroku, Spree Commerce, PostgreSQL, MySQL and Linux.</h3>
-<h3>
-Deepak is continuously contributing to open source communities. He is an active user on <strong>Stack Overflow</strong>. He has also contributed to Rails Spree and number of ruby libraries
-</h3>
-<h3>
-Deepak also won an internal company round of Code Gladiators 2015 organized by Techgig and has been awarded by certificate and a trophy.
-</h3>
-<h3>
-Check Deepak Mahakale's profile on [Stack Overflow](https://stackoverflow.com/users/4758119/deepak-mahakale?tab=profile)
-</h3>
-<h3>
-Follow Deepak Mahakale on [Github](https://github.com/deepakmahakale)
-<h3>
--->
+<p>
+<a href="https://stackoverflow.com/users/4758119/deepak-mahakale?tab=profile" class="orange" target="_blank"> Stack Overflow profile »</a>
+</p>
+<p>
+<a href="https://github.com/deepakmahakale" class="orange" target="_blank"> GitHub profile »</a>
+</p>

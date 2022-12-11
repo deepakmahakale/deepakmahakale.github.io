@@ -2,6 +2,7 @@
 .site-header {
   background-color: #eeeeee;
   padding: 70px 0 155px;
+  color: #4c5365;
   h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
@@ -11,7 +12,6 @@
   .banner-text {
     text-align: center;
     margin: 55px auto 25px auto;
-    color: #4c5365;
   }
 }
 
@@ -24,6 +24,17 @@
     font-weight: 300;
     font-size: 28px;
     line-height: 38px;
+  }
+}
+
+.banner-image {
+  display: flex;
+  justify-content: center;
+  img {
+    margin: auto;
+    border-radius: 100px;
+    max-height: 200px;
+    max-width: 200px;
   }
 }
 
@@ -72,7 +83,7 @@
     }
     .social {
       float: left;
-      width: 50%;
+      width: 100%;
       @include media-query($on-palm) {
         width: 100%;
         text-align: center;
@@ -80,20 +91,12 @@
       }
 
       .footer-links {
-        display: auto;
+        display: flex;
+        justify-content: space-between;
 
         @include media-query($on-palm) {
           display: none;
         }
-      }
-    }
-    .work {
-      float: left;
-      width: 50%;
-      min-height: 220px;
-      @include media-query($on-palm) {
-        width: 100%;
-        text-align: center;
       }
     }
   }

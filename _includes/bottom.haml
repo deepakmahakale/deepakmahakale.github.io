@@ -43,32 +43,4 @@
             %svg.svg-icon.grey
               %use{"xlink:href": "{{ '/assets/social-icons.svg#stackoverflow' | relative_url }}"}
 
-    .work.recent-tweets
-      %h6 Recent Tweets
-      .divider
-      #slideshow
-        {% for tweet in site.data.tweets %}
-        %div
-          %strong
-            %a{href: "{{tweet.user.url}}", target: :_blank, onclick:"window.open('{{tweet.user.url}}','popup','width=600,height=600'); return false;" } @{{ tweet.user.screen_name }}
-          \ · {{ tweet.created_at | date: "%b %d, %y" }}
-          %br
-          %br
-          {{ tweet.text | newline_to_br | strip_newlines | truncate: 170, '...' }}
-          %br
-          \ [
-          %a{href: "{{tweet.url}}", target: :_blank, onclick:"window.open('{{tweet.url}}','popup','width=600,height=600'); return false;" } Link
-          ]
-        {% endfor %}
-      :javascript
-        $("#slideshow > div:gt(0)").hide();
-        setInterval(function() {
-          $('#slideshow > div:first')
-            .fadeOut(1000)
-            .next()
-            .delay(1100)
-            .fadeIn(1000)
-            .end()
-            .appendTo('#slideshow');
-        },  10000);
   .clearfix
