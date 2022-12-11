@@ -13,6 +13,16 @@
     text-align: center;
     margin: 55px auto 25px auto;
   }
+  .banner-image {
+    display: flex;
+    justify-content: center;
+    img {
+      margin: auto;
+      border-radius: 100px;
+      max-height: 200px;
+      max-width: 200px;
+    }
+  }
 }
 
 .page-header {
@@ -24,17 +34,6 @@
     font-weight: 300;
     font-size: 28px;
     line-height: 38px;
-  }
-}
-
-.banner-image {
-  display: flex;
-  justify-content: center;
-  img {
-    margin: auto;
-    border-radius: 100px;
-    max-height: 200px;
-    max-width: 200px;
   }
 }
 
@@ -97,6 +96,9 @@
         @include media-query($on-palm) {
           display: none;
         }
+      }
+      h6 {
+        color: $blue-color;
       }
     }
   }

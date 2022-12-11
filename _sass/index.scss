@@ -34,6 +34,9 @@ $hamburger-layer-border-radius: 0px;
 $hamburger-inner-top: 3.5px;
 $hamburger-hover-opacity: 1.0;
 
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    800px !default;
