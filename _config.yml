@@ -31,7 +31,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/default-card.png
+      image: /assets/images/default-card-seo.png
 
 # Social sites for footer
 social_links:
