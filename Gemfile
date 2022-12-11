@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 4.0.0'
+gem 'jekyll', '~> 4.0'
 group :jekyll_plugins do
-  gem 'jekyll-feed', '~> 0.12'
+  gem 'jekyll-feed'
   gem 'jekyll-haml-markup'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
@@ -13,6 +13,6 @@ group :development do
 end
 
 install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem 'tzinfo', '~> 1.2'
+  gem 'tzinfo'
   gem 'tzinfo-data'
 end
