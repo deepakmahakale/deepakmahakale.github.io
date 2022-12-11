@@ -12,6 +12,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+sass:
+  style: compressed
+
+exclude:
+  - _sass/*
+
 # SEO Stuff
 author:
   twitter: deepakmahakale
