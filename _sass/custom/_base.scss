@@ -12,7 +12,13 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font-family: $base-font-family;
+  font-style: normal;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  letter-spacing: 0.044px;
+
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
@@ -131,7 +137,7 @@ blockquote {
  * Code formatting
  */
  pre, code {
-  font-size: 15px;
+  font-size: 18px;
   border: 1px solid $grey-color-light;
   border-radius: 3px;
   background-color: #eef;
