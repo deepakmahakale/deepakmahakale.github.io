@@ -1,10 +1,12 @@
 title: Deepak Mahakale
 email: deepakmahakale@gmail.com
-description: ""
-baseurl: ""
-url: "https://deepakmahakale.in"
+description: >-
+  Software professional with over 8 years of experience in the
+  software development industry.
+baseurl: ''
+url: 'https://deepakmahakale.in'
 twitter_username: deepakmahakale
-github_username:  deepakmahakale
+github_username: deepakmahakale
 google_tag_manager_id: GTM-WRTX84W
 
 plugins:
@@ -16,7 +18,7 @@ sass:
   style: compressed
 
 exclude:
-  - _site/_sass/
+  - sass
 
 # SEO Stuff
 author:
@@ -35,7 +37,7 @@ social:
     - https://www.instagram.com/deepakmahakale
 defaults:
   - scope:
-      path: ""
+      path: ''
     values:
       image: /assets/images/default-card-seo.png
 
