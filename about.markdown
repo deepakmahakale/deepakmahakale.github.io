@@ -2,13 +2,7 @@
 layout: page
 title: About
 permalink: /about
-javascripts:
-  [
-    'https://www.amcharts.com/lib/4/core.js',
-    'https://www.amcharts.com/lib/4/charts.js',
-    'https://www.amcharts.com/lib/4/plugins/wordCloud.js',
-    'https://www.amcharts.com/lib/4/themes/animated.js'
-  ]
+javascripts: []
 description: >
   Software Professional with over 8 years of of experience in the software development industry.
   Currently working with Saeloun Technologies Pvt. Ltd. Pune.
