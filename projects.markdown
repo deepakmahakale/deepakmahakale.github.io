@@ -9,6 +9,6 @@ description: >
 
 <div class='projects-wrapper'>
   {% for project in site.data.projects %}
-    {% include box.haml %}
+    {% include box.html %}
   {% endfor %}
 </div>

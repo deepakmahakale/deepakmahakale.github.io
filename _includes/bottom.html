@@ -1,0 +1,74 @@
+<div class="bottom">
+  <div class="contact wrapper">
+    <div class="social">
+      <h6>Social Media</h6>
+      <div class="divider"></div>
+      {%- assign social = site.social_links -%}
+      <ul class="no-style footer-links">
+        <li>
+          <a href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.twitter | escape }}">Twitter</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.facebook | escape }}">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/{{ social.instagram | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.instagram | escape }}">Instagram</a>
+        </li>
+        <li>
+          <a href="https://github.com/{{ social.github | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.github | escape }}">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.linkedin | escape }}">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://stackoverflow.com/users/{{ social.stackoverflow | escape }}" rel="me" target="_blank" title="{{ social.stackoverflow | escape }}">Stack Overflow</a>
+        </li>
+      </ul>
+      <ul class="social-media-list">
+        <li>
+          <a href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.twitter | escape }}">
+            <svg class="svg-icon grey">
+              <use xlink:href="{{ '/assets/social-icons.svg#twitter' | relative_url }}"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.facebook | escape }}">
+            <svg class="svg-icon grey">
+              <use xlink:href="{{ '/assets/social-icons.svg#facebook' | relative_url }}"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/{{ social.instagram | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.instagram | escape }}">
+            <svg class="svg-icon grey">
+              <use xlink:href="{{ '/assets/social-icons.svg#instagram' | relative_url }}"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/{{ social.github | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.github | escape }}">
+            <svg class="svg-icon grey">
+              <use xlink:href="{{ '/assets/social-icons.svg#github' | relative_url }}"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" rel="me" target="_blank" title="{{ social.linkedin | escape }}">
+            <svg class="svg-icon grey">
+              <use xlink:href="{{ '/assets/social-icons.svg#linkedin' | relative_url }}"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://stackoverflow.com/users/{{ social.stackoverflow | escape }}" rel="me" target="_blank" title="{{ social.stackoverflow | escape }}">
+            <svg class="svg-icon grey">
+              <use xlink:href="{{ '/assets/social-icons.svg#stackoverflow' | relative_url }}"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

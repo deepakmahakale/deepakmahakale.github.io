@@ -1,0 +1,37 @@
+<div class="menu-button">
+  <button class="hamburger hamburger--spring" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+</div>
+<script>
+  var hamburger = document.querySelector('.hamburger');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('is-active');
+    document.body.classList.toggle('show-menu');
+
+  });
+</script>
+<div class="menu-wrapper">
+  <nav class="menu">
+    <div class="list-items uppercase">
+      <a class="underline-effect" href="{{ site.url }}">
+        <span>Home</span>
+      </a>
+      <br/>
+      <a class="underline-effect" href="{{ site.url }}/blog">
+        <span>Blog</span>
+      </a>
+      <br/>
+      <a class="underline-effect" href="{{ site.url }}/about">
+        <span>About</span>
+      </a>
+      <br/>
+      <a class="underline-effect" href="mailto:hello@deepakmahakale.in">
+        <span>Contact</span>
+      </a>
+    </div>
+  </nav>
+</div>

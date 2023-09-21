@@ -1,0 +1,19 @@
+<div class="box">
+  <div class="box-image">
+    <img alt="{{ project.image.alt }}" class="image" src="{{ project.image.url }}"/>
+    <a href="{{ project.url }}" target="_blank">
+      <div class="overlay">
+        <div class="text">
+          {{ project.overlay.title }}
+        </div>
+        <hr/>
+        <div class="sub-text">
+          {{ project.overlay.sub_title | truncate: 200 }}
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="box-title">
+    {{ project.title }}
+  </div>
+</div>
