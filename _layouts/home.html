@@ -1,14 +1,40 @@
 ---
 layout: default
 ---
+<style>
+  li.no-style {
+    list-style: none;
+  }
 
-<div class="home">
-  <div class="check-out-blog">
-    <h5>
-      I share my thoughts and ruby tips
-      <a href="/blog" class="orange">
-        <strong>here »</strong>
-      </a>
-    </h5>
-  </div>
-</div>
+  li.post-preview {
+    border-bottom: 0.5px solid #00C0CA;
+    padding: 30px 0;
+  }
+
+  .page-heading {
+    text-align: center;
+  }
+
+  .post-excerpt {
+    padding: 30px 0;
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(106, 159, 181, 0.15);
+    padding: 0 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .tag:before {
+    content: "\f02b";
+    font-family: FontAwesome;
+    padding-right: 0.5em;
+  }
+</style>
+<div id="recentArticles"></div>
+<script>
+  $('#recentArticles').load('https://deepakmahakale.com/blog/ .home');
+</script>
