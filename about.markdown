@@ -4,7 +4,7 @@ title: About
 permalink: /about
 javascripts: []
 description: >
-  Software Professional with over 8 years of of experience in the IT industry.
+  Software Professional with over 9 years of of experience in the IT industry.
   Currently working with Saeloun Technologies Pvt. Ltd. Pune.
   Knows Spree Commerce, Postgres, MySQL, Capistrano, Elastic Search, Heroku, SendGrid, AWS, Azure and more.
   Active contributor to open source communities.
@@ -13,7 +13,7 @@ description: >
 <p>
 <strong>Deepak</strong>
 is a software professional with over
-<strong>8 years</strong>
+<strong>9 years</strong>
 of experience in the IT industry.
 </p>
 
