@@ -18,7 +18,7 @@ GEM
       ffi (>= 1.0.0)
       rake
     forwardable-extended (2.6.0)
-    google-protobuf (3.23.4)
+    google-protobuf (3.25.5)
     http (5.1.1)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
