@@ -1,0 +1,37 @@
+- role: Senior Software Developer
+  company: Saeloun Technologies
+  url: https://www.saeloun.com/
+  from: 2021-02
+  to: Present
+  highlights:
+    - Managing a team and building an e-learning application
+    - Database architecture design for the latest enterprise module
+    - Pundit + Auth0 for authentication and authorization
+    - Stripe payments and subscriptions for recurring programs
+    - User onboarding flow with Turbo and Hotwire
+- role: Senior Software Engineer
+  company: Velotio Technologies
+  url: https://www.velotio.com/
+  from: 2018-07
+  to: 2021-02
+  highlights:
+    - Upgraded Rails applications from 4.0 to 6.0
+    - Fixed expensive queries to bring response times down
+    - Kept applications on the latest packages and fixed vulnerabilities
+- role: Senior Software Developer
+  company: Webonise Lab
+  url: https://www.webonise.com/
+  from: 2017-04
+  to: 2018-07
+  highlights:
+    - Migrated user lookup from Postgres to Elasticsearch, cutting wait time by 50%
+    - Reviewed pull requests and ran sessions on tools and best practices
+- role: Software Developer
+  company: Webonise Lab
+  url: https://www.webonise.com/
+  from: 2014-11
+  to: 2017-03
+  highlights:
+    - Maintained an e-learning platform with around 3.8 million users
+    - Built and integrated components for a Spree based e-commerce site
+    - Fixed hundreds of bugs within two sprints

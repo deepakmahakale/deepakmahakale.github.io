@@ -1,0 +1,34 @@
+# Trip photos for the travel sections on the home page.
+# Drop the image in assets/images/trips/ and fill in an entry. Entries without
+# an image show a placeholder, so delete the ones you don't need.
+# shape: wide (3:2), tall (4:5) or square
+- image:
+  place: Trip one
+  caption: A line about this trip
+  date: 2026-01
+  shape: wide
+- image:
+  place: Trip two
+  caption: A line about this trip
+  date: 2025-10
+  shape: tall
+- image:
+  place: Trip three
+  caption: A line about this trip
+  date: 2025-06
+  shape: square
+- image:
+  place: Trip four
+  caption: A line about this trip
+  date: 2025-02
+  shape: tall
+- image:
+  place: Trip five
+  caption: A line about this trip
+  date: 2024-12
+  shape: wide
+- image:
+  place: Trip six
+  caption: A line about this trip
+  date: 2024-08
+  shape: square

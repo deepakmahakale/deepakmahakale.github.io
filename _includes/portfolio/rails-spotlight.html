@@ -1,0 +1,34 @@
+<section class="spotlight">
+  <div class="spotlight__text">
+    <p class="spotlight__eyebrow">Shipped in Rails 8.0</p>
+    <h2 class="spotlight__title"><code>/rails/info/notes</code></h2>
+    <p>
+      An internal page that lists every <code>TODO</code>, <code>FIXME</code> and <code>OPTIMIZE</code>
+      annotation in your app, the same output as <code>bin/rails notes</code>, right in the browser
+      next to <code>/rails/info/routes</code>.
+    </p>
+    <p>
+      <a class="btn btn--primary" href="https://github.com/rails/rails/pull/49240">Read PR #49240</a>
+      <a class="btn btn--inverse" href="https://github.com/rails/rails/blob/v8.0.0/railties/CHANGELOG.md">Rails 8.0 CHANGELOG</a>
+    </p>
+  </div>
+  <div class="spotlight__demo" aria-hidden="true">
+    <div class="browser">
+      <div class="browser__bar"><i></i><i></i><i></i><span>localhost:3000/rails/info/notes</span></div>
+      <div class="browser__body">
+        <table>
+          <thead><tr><th>File</th><th>Line</th><th>Tag</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>app/models/user.rb</td><td>12</td><td><b class="tag tag--todo">TODO</b></td><td>Move to a concern</td></tr>
+            <tr><td>app/jobs/sync_job.rb</td><td>4</td><td><b class="tag tag--fixme">FIXME</b></td><td>Retry on timeout</td></tr>
+            <tr><td>app/queries/report.rb</td><td>27</td><td><b class="tag tag--optimize">OPTIMIZE</b></td><td>N+1 on line items</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <pre class="changelog-snippet"><code>*   Add internal page `/rails/info/notes`, that displays
+    the same information as `bin/rails notes`.
+
+    *Deepak Mahakale*</code></pre>
+  </div>
+</section>

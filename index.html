@@ -1,0 +1,89 @@
+---
+layout: splash
+title: Deepak Mahakale - Ruby on Rails developer
+excerpt: Senior Ruby on Rails developer in Pune, India. Open source contributor to Rails and Spree, Stack Overflow regular and writer at ror.tips, kamal.wiki and my blog.
+classes: portfolio-home portfolio-wall
+---
+
+{% include portfolio/contrib-totals.html %}
+{% include portfolio/all-prs.html %}
+{%- assign this_year = site.time | date: '%Y' | plus: 0 -%}
+
+<section class="wall-hero">
+  <div class="wall-hero__inner">
+    <img class="wall-hero__avatar" src="{{ site.author.avatar | relative_url }}" alt="Deepak Mahakale">
+    <div>
+      <h1 class="wall-hero__name">Deepak Mahakale <span>@deepakmahakale</span></h1>
+      <p class="wall-hero__bio">Senior Software Developer at <a href="https://www.saeloun.com/">Saeloun</a>. I fix things upstream so everyone gets the fix.</p>
+      <p class="wall-hero__counts">
+        <span><strong>{{ contrib_prs }}</strong> PRs merged</span>
+        <span><strong>{{ contrib_repos }}</strong> projects</span>
+        <span><strong>{{ contrib_stars_k }}k</strong> stars across them</span>
+        <span><strong data-stat="so-reputation">21k+</strong> Stack Overflow rep</span>
+      </p>
+      <p>
+        <a class="btn btn--primary" href="{{ '/resume.pdf' | relative_url }}">Résumé</a>
+        <a class="btn btn--inverse" href="https://deepakmahakale.com/blog/">Blog</a>
+        <a class="btn btn--inverse" href="mailto:deepakmahakale@gmail.com">Say hello</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="portfolio">
+  <section>
+    <h2 class="section-title">Merged pull requests per year</h2>
+    {%- assign max = 0 -%}
+    {%- for year in (2016..this_year) -%}
+      {%- assign y = year | append: "" -%}{%- assign n = 0 -%}
+      {%- for row in all_prs -%}{%- assign f = row | split: "|" -%}{%- if f[0] contains y -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+      {%- if n > max -%}{%- assign max = n -%}{%- endif -%}
+    {%- endfor -%}
+    <div class="year-bars">
+      {%- for year in (2016..this_year) -%}
+        {%- assign y = year | append: "" -%}{%- assign n = 0 -%}
+        {%- for row in all_prs -%}{%- assign f = row | split: "|" -%}{%- if f[0] contains y -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+        {%- assign pct = n | times: 100 | divided_by: max -%}
+        <div class="year-bars__col" title="{{ n }} merged in {{ year }}">
+          <span class="year-bars__n">{% if n > 0 %}{{ n }}{% endif %}</span>
+          <span class="year-bars__bar" style="height: {{ pct }}%"></span>
+          <span class="year-bars__year">{{ year | slice: 2, 2 }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  {% include portfolio/rails-spotlight.html %}
+
+  <section class="upstream">
+    <div class="upstream__col">
+      <h2 class="section-title"><img class="org-avatar" src="https://github.com/rails.png?size=64" alt=""> Merged into Rails</h2>
+      <p class="section-lead">Docs, release notes, tests and a feature, {{ rails_repo.prs.size }} PRs since 2022.</p>
+      {% include portfolio/pr-list.html repo=rails_repo skip=49240 %}
+    </div>
+    <div class="upstream__col">
+      <h2 class="section-title"><img class="org-avatar" src="https://github.com/spree.png?size=64" alt=""> Merged into Spree</h2>
+      <p class="section-lead">Migrations, deprecations and upgrade docs for the e-commerce platform I used to build on.</p>
+      {% include portfolio/pr-list.html repo=spree_repo %}
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">And {{ contrib_repos | minus: 2 }} more projects</h2>
+    <p class="repo-chips">
+      {%- for repo in site.data.contributions.repos -%}
+      {%- unless repo.name == "rails/rails" or repo.name == "spree/spree" -%}
+      <a class="repo-chip" href="{{ repo.prs.first.url }}" title="{{ repo.prs.size }} merged">
+        <img src="https://github.com/{{ repo.owner }}.png?size=40" alt="" loading="lazy">
+        {{ repo.name }}
+        {%- if repo.stars >= 1000 %} <span class="repo-chip__stars">★ {{ repo.stars | divided_by: 1000 }}k</span>{% endif -%}
+      </a>
+      {%- endunless -%}
+      {%- endfor -%}
+    </p>
+  </section>
+
+  {% include portfolio/latest-writing.html %}
+</div>
+
+<script src="{{ '/assets/js/portfolio.js' | relative_url }}" defer></script>

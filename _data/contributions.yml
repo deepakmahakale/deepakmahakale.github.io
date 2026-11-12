@@ -1,0 +1,271 @@
+# Public pull requests merged into other people's repos, newest first per repo.
+# Regenerate with: gh api search/issues -f q="author:deepakmahakale type:pr is:merged is:public -user:deepakmahakale"
+repos:
+  - name: rails/rails
+    owner: rails
+    stars: 59076
+    description: "Ruby on Rails"
+    prs:
+      - number: 52115
+        title: "Add changelog for the new internal route rails/info/notes"
+        merged: 2024-06-13
+        url: https://github.com/rails/rails/pull/52115
+      - number: 49240
+        title: "Add an internal route for bin/rails notes"
+        merged: 2024-06-12
+        url: https://github.com/rails/rails/pull/49240
+      - number: 49149
+        title: "rewhere argument on #merge deprecated"
+        merged: 2023-09-05
+        url: https://github.com/rails/rails/pull/49149
+      - number: 49148
+        title: "Minor formatting fixes for code blocks"
+        merged: 2023-09-05
+        url: https://github.com/rails/rails/pull/49148
+      - number: 49061
+        title: "Add deprecations/removals for action-mailer, active-storage and active-job"
+        merged: 2023-08-29
+        url: https://github.com/rails/rails/pull/49061
+      - number: 49059
+        title: "Add ActiveRecord::Base.normalizes to 7.1 release notes"
+        merged: 2023-08-29
+        url: https://github.com/rails/rails/pull/49059
+      - number: 47585
+        title: "Add nodoc for SourcesController"
+        merged: 2023-03-06
+        url: https://github.com/rails/rails/pull/47585
+      - number: 46216
+        title: "Add pre-defined variant examples in representable"
+        merged: 2022-10-10
+        url: https://github.com/rails/rails/pull/46216
+      - number: 45743
+        title: "Fix test case to check has_many_attached"
+        merged: 2022-08-03
+        url: https://github.com/rails/rails/pull/45743
+      - number: 45396
+        title: "Fix breaking code block formatting"
+        merged: 2022-06-18
+        url: https://github.com/rails/rails/pull/45396
+      - number: 45272
+        title: "Fix typo in documentation examples"
+        merged: 2022-06-06
+        url: https://github.com/rails/rails/pull/45272
+  - name: forem/forem
+    owner: forem
+    stars: 22818
+    description: "For empowering community 🌱"
+    prs:
+      - number: 12948
+        title: "Fixes locale issue with edited_at date of post on the dashboard"
+        merged: 2021-03-10
+        url: https://github.com/forem/forem/pull/12948
+  - name: spree/spree
+    owner: spree
+    stars: 15829
+    description: "Open Source Platform for DTC, B2B Commerce, Marketplaces & Omnichannel. REST APIs, TypeScript SDKs, and production-ready Next.js storefront. Self-host it. Own your data. No vendor lock-in. Zero platform fees."
+    prs:
+      - number: 8897
+        title: "Deprecation warning: BigDecimal.new() is deprecated."
+        merged: 2018-10-15
+        url: https://github.com/spree/spree/pull/8897
+      - number: 7691
+        title: "Add type while removing column to enable rollback"
+        merged: 2016-12-16
+        url: https://github.com/spree/spree/pull/7691
+      - number: 7718
+        title: "Check presence of column with column_exists?"
+        merged: 2016-12-01
+        url: https://github.com/spree/spree/pull/7718
+      - number: 7699
+        title: "Add link to 2.4 upgrade"
+        merged: 2016-11-28
+        url: https://github.com/spree/spree/pull/7699
+  - name: mmistakes/minimal-mistakes
+    owner: mmistakes
+    stars: 13590
+    description: ":triangular_ruler: Jekyll theme for building a personal site, blog, project documentation, or portfolio."
+    prs:
+      - number: 4882
+        title: "Change the link it is redirecting to - Fix ahref issue"
+        merged: 2024-06-23
+        url: https://github.com/mmistakes/minimal-mistakes/pull/4882
+  - name: howdyai/botkit
+    owner: howdyai
+    stars: 11582
+    description: "Botkit is an open source developer tool for building chat bots, apps and custom integrations for major messaging platforms."
+    prs:
+      - number: 1858
+        title: "Fix typo"
+        merged: 2019-11-20
+        url: https://github.com/howdyai/botkit/pull/1858
+      - number: 1848
+        title: "Fixed a typo"
+        merged: 2019-11-06
+        url: https://github.com/howdyai/botkit/pull/1848
+  - name: RobinHerbots/Inputmask
+    owner: RobinHerbots
+    stars: 6453
+    description: "Input Mask plugin"
+    prs:
+      - number: 2017
+        title: "Fix the typo"
+        merged: 2018-09-25
+        url: https://github.com/RobinHerbots/Inputmask/pull/2017
+  - name: zombocom/derailed_benchmarks
+    owner: zombocom
+    stars: 3067
+    description: "Go faster, off the Rails - Benchmarks for your whole Rails app"
+    prs:
+      - number: 222
+        title: "Add appraisal and rails 7 to test matrix"
+        merged: 2023-03-06
+        url: https://github.com/zombocom/derailed_benchmarks/pull/222
+      - number: 223
+        title: "Add CI badge to README"
+        merged: 2022-09-23
+        url: https://github.com/zombocom/derailed_benchmarks/pull/223
+  - name: zombocom/wicked
+    owner: zombocom
+    stars: 2848
+    description: "Use wicked to turn your controller into a wizard"
+    prs:
+      - number: 302
+        title: "Add rails 7.1 to the test matrix"
+        merged: 2024-01-25
+        url: https://github.com/zombocom/wicked/pull/302
+      - number: 294
+        title: "Return 422 - :unprocessable_entity when form submissions fails"
+        merged: 2022-09-14
+        url: https://github.com/zombocom/wicked/pull/294
+      - number: 293
+        title: "Add rails 7.0 to ci"
+        merged: 2022-09-13
+        url: https://github.com/zombocom/wicked/pull/293
+      - number: 289
+        title: "Add CI badge"
+        merged: 2022-08-05
+        url: https://github.com/zombocom/wicked/pull/289
+      - number: 288
+        title: "FIXES #287 - Add GitHub CI"
+        merged: 2022-08-04
+        url: https://github.com/zombocom/wicked/pull/288
+  - name: zombocom/maildown
+    owner: zombocom
+    stars: 592
+    description: "Write your ActionMailer email templates in Markdown, send in html and plain text"
+    prs:
+      - number: 67
+        title: "Add CI badge to README"
+        merged: 2022-08-17
+        url: https://github.com/zombocom/maildown/pull/67
+  - name: Yegorov/awesome-ruby-blogs
+    owner: Yegorov
+    stars: 416
+    description: "A curated list of Awesome Ruby Blogs and Newsletters for Ruby Developers and Newbies"
+    prs:
+      - number: 24
+        title: "Add ROR Tips & Personal blog"
+        merged: 2025-09-10
+        url: https://github.com/Yegorov/awesome-ruby-blogs/pull/24
+  - name: threedaymonk/htmlbeautifier
+    owner: threedaymonk
+    stars: 373
+    description: "A normaliser/beautifier for HTML that also understands embedded Ruby. Ideal for tidying up Rails templates."
+    prs:
+      - number: 57
+        title: "Support for version option"
+        merged: 2021-11-23
+        url: https://github.com/threedaymonk/htmlbeautifier/pull/57
+  - name: spree-contrib/spree_i18n
+    owner: spree-contrib
+    stars: 354
+    description: "I18n translation files for Spree Commerce."
+    prs:
+      - number: 803
+        title: "Correct translation for Prototype"
+        merged: 2019-12-31
+        url: https://github.com/spree-contrib/spree_i18n/pull/803
+  - name: alexrudall/ruby-anthropic
+    owner: alexrudall
+    stars: 233
+    description: "Anthropic (Claude) API + Ruby! 🤖🌌"
+    prs:
+      - number: 12
+        title: "Add documentation for messages API"
+        merged: 2024-04-25
+        url: https://github.com/alexrudall/ruby-anthropic/pull/12
+  - name: vishaltelangre/music-dl
+    owner: vishaltelangre
+    stars: 115
+    description: "Download music from jiosaavn.com, gaana.com, etc."
+    prs:
+      - number: 36
+        title: "Update README to add ffmpeg in requirements"
+        merged: 2020-09-23
+        url: https://github.com/vishaltelangre/music-dl/pull/36
+  - name: basecamp/kamal-site
+    owner: basecamp
+    stars: 78
+    description: "kamal-deploy.org"
+    prs:
+      - number: 109
+        title: "Fix broken link in upgrade guide"
+        merged: 2024-09-27
+        url: https://github.com/basecamp/kamal-site/pull/109
+  - name: civisanalytics/ruby_audit
+    owner: civisanalytics
+    stars: 76
+    description: "Checks Ruby and RubyGems against known security vulnerabilities."
+    prs:
+      - number: 41
+        title: "Add release link to changelog"
+        merged: 2025-01-28
+        url: https://github.com/civisanalytics/ruby_audit/pull/41
+  - name: igor-alexandrov/jekyll-og-image
+    owner: igor-alexandrov
+    stars: 31
+    description: "Jekyll plugin to generate GitHub-style open graph images"
+    prs:
+      - number: 7
+        title: "Fix incorrect markdown"
+        merged: 2024-03-20
+        url: https://github.com/igor-alexandrov/jekyll-og-image/pull/7
+  - name: TDAmeritrade/botbuilder-storage-postgres
+    owner: TDAmeritrade
+    stars: 15
+    description: "Botbuilder adapter for Postgres NoSQL storage."
+    prs:
+      - number: 29
+        title: "Add note for password with special characters"
+        merged: 2021-05-07
+        url: https://github.com/TDAmeritrade/botbuilder-storage-postgres/pull/29
+      - number: 18
+        title: "Add example app for postgres adapter."
+        merged: 2020-01-03
+        url: https://github.com/TDAmeritrade/botbuilder-storage-postgres/pull/18
+  - name: coorasse/heroku-api-postgres
+    owner: coorasse
+    stars: 14
+    description: "A Ruby library to invoke Heroku Postgres APIs"
+    prs:
+      - number: 15
+        title: "Fixes #6 - Return latest backup if backup_num is not provided"
+        merged: 2022-11-23
+        url: https://github.com/coorasse/heroku-api-postgres/pull/15
+  - name: tejaswinichile/covin
+    owner: tejaswinichile
+    stars: 7
+    description: "checks covin slots and create beep sound"
+    prs:
+      - number: 7
+        title: "Move config to JSON"
+        merged: 2021-05-31
+        url: https://github.com/tejaswinichile/covin/pull/7
+      - number: 4
+        title: "Rake refactor"
+        merged: 2021-05-03
+        url: https://github.com/tejaswinichile/covin/pull/4
+      - number: 1
+        title: "Add source to Gemfile"
+        merged: 2021-05-03
+        url: https://github.com/tejaswinichile/covin/pull/1

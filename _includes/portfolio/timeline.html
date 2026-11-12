@@ -1,0 +1,18 @@
+<ol class="timeline">
+  {%- for job in site.data.experience -%}
+  <li class="timeline__item">
+    <div class="timeline__when">
+      {{ job.from | append: '-01' | date: '%b %Y' }} – {% if job.to == 'Present' %}Present{% else %}{{ job.to | append: '-01' | date: '%b %Y' }}{% endif %}
+    </div>
+    <div class="timeline__what">
+      <h3 class="timeline__role">{{ job.role }}</h3>
+      <a class="timeline__company" href="{{ job.url }}">{{ job.company }}</a>
+      <ul>
+        {%- for h in job.highlights %}
+        <li>{{ h }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </li>
+  {%- endfor -%}
+</ol>

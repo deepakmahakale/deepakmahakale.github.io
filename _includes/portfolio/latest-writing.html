@@ -1,0 +1,17 @@
+<section class="writing">
+  <h2 class="section-title">Latest writing</h2>
+  <p class="section-lead">Fresh from my blog, <a href="https://ror.tips">ror.tips</a> and <a href="https://kamal.wiki">kamal.wiki</a>.</p>
+  <div class="writing__grid" data-feeds='[
+      {"name": "ror.tips", "key": "ror", "url": "https://ror.tips/feed.xml"},
+      {"name": "kamal.wiki", "key": "kamal", "url": "https://kamal.wiki/feed.xml"},
+      {"name": "Blog", "key": "blog", "url": "https://deepakmahakale.com/blog/feed.xml"}
+    ]' data-limit="6">
+    {%- for i in (1..6) -%}
+    <div class="writing__card writing__card--loading" aria-hidden="true">
+      <span class="writing__site"></span>
+      <span class="writing__title"></span>
+      <span class="writing__date"></span>
+    </div>
+    {%- endfor -%}
+  </div>
+</section>
