@@ -8,7 +8,7 @@ description: >
 
 I'm **Deepak**, and I've been building web applications with Ruby on Rails since 2014.
 I'm currently a Senior Software Developer at [Saeloun Technologies](https://www.saeloun.com/),
-and before that I worked with [Velotio Technologies](https://www.velotio.com/) and [Webonise Lab](https://www.webonise.com/).
+and before that I worked with [Velotio (now R Systems)](https://www.rsystems.com/) and [Webonise Lab (now Haptiq)](https://www.haptiq.com/).
 
 Beyond Ruby on Rails I work with JavaScript, React, Hotwire, Kamal, PostgreSQL, MySQL, Elasticsearch,
 Spree Commerce, AWS, Azure and Linux.
