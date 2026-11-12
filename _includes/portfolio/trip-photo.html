@@ -1,0 +1,10 @@
+{%- comment -%} Renders one entry from _data/trips.yml; pass trip= and optionally class= {%- endcomment -%}
+{%- assign trip = include.trip -%}
+<figure class="trip trip--{{ trip.shape | default: 'wide' }} {{ include.class }}">
+  {%- if trip.image -%}
+  <img src="{{ trip.image | prepend: '/assets/images/trips/' | relative_url }}" alt="{{ trip.place }}" loading="lazy">
+  {%- else -%}
+  <div class="trip__placeholder" aria-hidden="true"><span>Your photo here</span><small>assets/images/trips/</small></div>
+  {%- endif -%}
+  <figcaption><strong>{{ trip.place }}</strong>{% if trip.caption %} {{ trip.caption }}{% endif %}{% if trip.date %} <span class="trip__date">{{ trip.date | append: '-01' | date: '%b %Y' }}</span>{% endif %}</figcaption>
+</figure>

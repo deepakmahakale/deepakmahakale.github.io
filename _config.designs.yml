@@ -1,0 +1,7 @@
+# Builds the alternate home page designs in _designs/ so they can be previewed locally.
+# They're not part of the normal build, so they never go live.
+#   bundle exec jekyll serve --config _config.yml,_config.designs.yml
+# Then open /designs/newspaper/, /designs/magazine/ and /designs/sunday-paper/
+collections:
+  designs:
+    output: true

@@ -1,0 +1,14 @@
+{%- comment -%} include.repo: a repo from site.data.contributions; include.skip: PR number to leave out {%- endcomment -%}
+<ul class="pr-list">
+  {%- for pr in include.repo.prs -%}
+  {%- unless pr.number == include.skip -%}
+  <li>
+    <a href="{{ pr.url }}">
+      <span class="pr-list__num">#{{ pr.number }}</span>
+      <span class="pr-list__title">{{ pr.title }}</span>
+      <time class="pr-list__date" datetime="{{ pr.merged }}">{{ pr.merged | date: '%b %Y' }}</time>
+    </a>
+  </li>
+  {%- endunless -%}
+  {%- endfor -%}
+</ul>

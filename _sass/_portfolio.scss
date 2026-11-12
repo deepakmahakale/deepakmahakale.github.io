@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Portfolio components (sections, latest writing, timeline, skills)
+   ========================================================================== */
+
+$hero-mid: #1d4350;
+$hero-end: #2f7d95;
+
+$site-colors: (
+  ror: #cc0000,
+  kamal: #e0605a,
+  blog: #ff664c,
+);
+
+.portfolio-home {
+  overflow-x: clip; // the profile header bleeds to the viewport edges
+}
+
+.btn--primary {
+  background-color: $hero-end;
+
+  &:hover {
+    background-color: mix(#000, $hero-end, 20%);
+  }
+}
+
+.portfolio-home .masthead {
+  border-bottom: 0;
+}
+
+.portfolio-home #main {
+  padding-top: 0;
+}
+
+/* Sections
+   ========================================================================== */
+
+.portfolio section {
+  margin-bottom: 3.5em;
+}
+
+.section-title {
+  margin-bottom: 0.25em;
+  font-size: $type-size-3;
+  border-bottom: 0;
+}
+
+.section-lead {
+  margin-top: 0;
+  color: $muted-text-color;
+}
+
+/* Latest writing
+   ========================================================================== */
+
+.writing__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin-top: 1.25em;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint($large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.writing__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  min-height: 9em;
+  padding: 1.1em 1.2em;
+  border: 1px solid $border-color;
+  border-top: 4px solid var(--site-color, #{$hero-end});
+  border-radius: 6px;
+  color: $text-color;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    color: $text-color;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(16, 35, 43, 0.12);
+  }
+
+  @each $key, $color in $site-colors {
+    &[data-site="#{$key}"] {
+      --site-color: #{$color};
+    }
+  }
+}
+
+.writing__site {
+  font-size: $type-size-7;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--site-color, #{$hero-end});
+}
+
+.writing__title {
+  flex: 1;
+  font-weight: bold;
+  line-height: 1.35;
+}
+
+.writing__date {
+  font-size: $type-size-6;
+  color: $muted-text-color;
+}
+
+.writing__card--loading {
+  .writing__site,
+  .writing__title,
+  .writing__date {
+    display: block;
+    border-radius: 4px;
+    background: linear-gradient(90deg, $lighter-gray 25%, mix(#fff, $lighter-gray, 50%) 50%, $lighter-gray 75%) 0 0 / 200% 100%;
+    animation: writing-shimmer 1.4s infinite linear;
+  }
+
+  .writing__site { width: 30%; height: 0.8em; }
+  .writing__title { width: 90%; height: 2.6em; flex: none; }
+  .writing__date { width: 40%; height: 0.8em; }
+}
+
+@keyframes writing-shimmer {
+  to { background-position: -200% 0; }
+}
+
+/* Experience timeline (about page)
+   ========================================================================== */
+
+.timeline {
+  margin: 1.5em 0 2.5em;
+  padding: 0;
+  list-style: none;
+  border-left: 2px solid mix(#fff, $hero-end, 60%);
+}
+
+.timeline__item {
+  position: relative;
+  margin: 0 0 1.75em;
+  padding-left: 1.5em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: calc(-0.45em - 1px);
+    top: 0.35em;
+    width: 0.9em;
+    height: 0.9em;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid $hero-end;
+  }
+
+  &:first-child::before {
+    background: $hero-end;
+  }
+
+  ul {
+    margin: 0.5em 0 0;
+    font-size: $type-size-6;
+  }
+}
+
+.timeline__when {
+  font-size: $type-size-6;
+  font-weight: bold;
+  color: $hero-end;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline__role {
+  margin: 0.2em 0 0;
+  font-size: $type-size-5;
+}
+
+.timeline__company {
+  font-size: $type-size-6;
+}
+
+/* Skills
+   ========================================================================== */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.skills__item {
+  padding: 0.25em 0.75em;
+  border-radius: 999px;
+  background: mix(#fff, $hero-end, 88%);
+  color: $hero-mid;
+  font-size: $type-size-6;
+  font-weight: bold;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .writing__card {
+    transition: none;
+  }
+
+  .writing__card--loading * {
+    animation: none;
+  }
+}
+
+/* Feature rows: equal-height cards with the button pinned to the bottom
+   ========================================================================== */
+
+@include breakpoint($small) {
+  .feature__wrapper,
+  .layout--single .feature__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feature__item {
+    display: flex;
+
+    .archive__item,
+    .archive__item-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .archive__item-body > p:last-child {
+      margin-top: auto;
+    }
+  }
+}

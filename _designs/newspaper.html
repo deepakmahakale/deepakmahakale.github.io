@@ -1,0 +1,143 @@
+---
+layout: splash
+title: Deepak Mahakale - Ruby on Rails developer
+permalink: /designs/newspaper/
+sitemap: false
+classes: portfolio-home portfolio-paper
+---
+
+{% include portfolio/contrib-totals.html %}
+{% include portfolio/all-prs.html %}
+{%- assign now_months = site.time | date: '%Y' | times: 12 -%}
+{%- assign month = site.time | date: '%-m' | plus: 0 -%}
+{%- assign years = now_months | plus: month | minus: 24179 | divided_by: 12 -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+
+<div class="paper">
+  <header class="paper__masthead">
+    <p class="paper__ears">
+      <span>Pune edition</span>
+      <span>Vol. {{ years }} · Est. 2014</span>
+      <span>Price: one coffee</span>
+    </p>
+    <h1 class="paper__name">The Daily Commit</h1>
+    <p class="paper__dateline">
+      <span>{{ site.time | date: '%A, %-d %B %Y' }}</span>
+      <span>All the Ruby that's fit to merge</span>
+      <span>Weather: 100% chance of Rails</span>
+    </p>
+  </header>
+
+  <div class="paper__front">
+    <article class="paper__lead">
+      <p class="paper__kicker">Rails 8.0</p>
+      <h2 class="paper__headline">Pune developer's page ships in Rails 8.0</h2>
+      <p class="paper__deck">Every Rails app now has <code>/rails/info/notes</code>, listing its TODOs, FIXMEs and OPTIMIZEs in the browser.</p>
+      <p class="paper__byline">By Our Open Source Correspondent</p>
+      <figure class="paper__figure">
+        <div class="browser" aria-hidden="true">
+          <div class="browser__bar"><i></i><i></i><i></i><span>localhost:3000/rails/info/notes</span></div>
+          <div class="browser__body">
+            <table>
+              <thead><tr><th>File</th><th>Line</th><th>Tag</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td>app/models/user.rb</td><td>12</td><td><b class="tag tag--todo">TODO</b></td><td>Move to a concern</td></tr>
+                <tr><td>app/jobs/sync_job.rb</td><td>4</td><td><b class="tag tag--fixme">FIXME</b></td><td>Retry on timeout</td></tr>
+                <tr><td>app/queries/report.rb</td><td>27</td><td><b class="tag tag--optimize">OPTIMIZE</b></td><td>N+1 on line items</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <figcaption>The new page, next to <code>/rails/info/routes</code>. Illustration.</figcaption>
+      </figure>
+      <div class="paper__columns">
+        <p><span class="paper__drop">D</span>eepak Mahakale, a Senior Software Developer at <a href="https://www.saeloun.com/">Saeloun</a>, has been credited in the railties CHANGELOG for Rails 8.0. His pull request, <a href="https://github.com/rails/rails/pull/49240">rails/rails#49240</a>, adds an internal route that shows the same output as <code>bin/rails notes</code>.</p>
+        <p>It is one of {{ rails_repo.prs.size }} pull requests he has had merged into Rails. The others range from release notes for Rails 7.1 to deprecation fixes, and his name also turns up in the history of {{ contrib_repos | minus: 1 }} other open source projects, Spree among them.</p>
+        <p>"If a gem is broken for me, it's broken for everyone," he is understood to have said, in a quote this newspaper made up but stands by. He has been writing Ruby on Rails for {{ years }} years.</p>
+        <p class="paper__more"><a href="https://github.com/rails/rails/blob/v8.0.0/railties/CHANGELOG.md">Read the CHANGELOG →</a></p>
+      </div>
+    </article>
+
+    <aside class="paper__rail">
+      <section class="paper__box">
+        <h3 class="paper__label">Open Source Index</h3>
+        <table class="paper__ticker">
+          <thead><tr><th>Repo</th><th>Stars</th><th>PRs</th></tr></thead>
+          <tbody>
+            {%- for repo in site.data.contributions.repos limit: 10 -%}
+            <tr>
+              <td><a href="https://github.com/{{ repo.name }}">{{ repo.name | split: "/" | last | upcase | truncate: 12, "…" }}</a></td>
+              <td>{% if repo.stars >= 1000 %}{{ repo.stars | divided_by: 100 | divided_by: 10.0 }}k{% else %}{{ repo.stars }}{% endif %}</td>
+              <td class="up">▲ {{ repo.prs.size }}</td>
+            </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+        <p class="paper__fine">{{ contrib_prs }} merged across {{ contrib_repos }} projects, {{ contrib_stars_k }}k stars combined.</p>
+      </section>
+
+      <section class="paper__box">
+        <h3 class="paper__label">By the numbers</h3>
+        <p class="paper__fig"><strong>{{ years }}</strong> years of Rails</p>
+        <p class="paper__fig"><strong>{{ rails_repo.prs.size }}</strong> PRs into Rails</p>
+        <p class="paper__fig"><strong data-stat="so-reputation">21k+</strong> Stack Overflow rep</p>
+      </section>
+    </aside>
+  </div>
+
+  <section class="paper__section">
+    <h3 class="paper__label paper__label--rule">In brief: the merge wire</h3>
+    <div class="paper__briefs">
+      {%- for row in all_prs limit: 8 -%}
+      {%- assign f = row | split: "|" -%}
+      {%- if f[2] == "49240" or f[2] == "52115" -%}{%- continue -%}{%- endif -%}
+      <article class="paper__brief">
+        <p class="paper__kicker">{{ f[1] }}</p>
+        <h4><a href="{{ f[4] }}">{{ f[3] }}</a></h4>
+        <p class="paper__fine">#{{ f[2] }} · merged {{ f[0] | date: '%-d %b %Y' }}</p>
+      </article>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="paper__section paper__split">
+    <div>
+      <h3 class="paper__label paper__label--rule">Opinion</h3>
+      <div class="writing__grid" data-feeds='[
+          {"name": "ror.tips", "key": "ror", "url": "https://ror.tips/feed.xml"},
+          {"name": "kamal.wiki", "key": "kamal", "url": "https://kamal.wiki/feed.xml"},
+          {"name": "Blog", "key": "blog", "url": "https://deepakmahakale.com/blog/feed.xml"}
+        ]' data-limit="5">
+        {%- for i in (1..5) -%}
+        <div class="writing__card writing__card--loading" aria-hidden="true">
+          <span class="writing__site"></span>
+          <span class="writing__title"></span>
+          <span class="writing__date"></span>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div>
+      <h3 class="paper__label paper__label--rule">Careers</h3>
+      {%- for job in site.data.experience -%}
+      <article class="paper__career">
+        <p class="paper__kicker">{{ job.from | slice: 0, 4 }}–{% if job.to == "Present" %}now{% else %}{{ job.to | slice: 0, 4 }}{% endif %}</p>
+        <h4><a href="{{ job.url }}">{{ job.role }}, {{ job.company }}</a></h4>
+        <p>{{ job.highlights | first }}.</p>
+      </article>
+      {%- endfor -%}
+
+      <div class="paper__classified">
+        <p class="paper__label">Classifieds</p>
+        <p><strong>WANTED:</strong> interesting Rails problems. Upgrades, slow queries, Hotwire, Kamal deploys. Will fix upstream if needed.</p>
+        <p><a href="mailto:deepakmahakale@gmail.com">deepakmahakale@gmail.com</a> · <a href="{{ '/resume.pdf' | relative_url }}">résumé</a></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="{{ '/assets/js/portfolio.js' | relative_url }}" defer></script>

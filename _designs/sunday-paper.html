@@ -1,0 +1,126 @@
+---
+layout: splash
+title: Deepak Mahakale - Ruby on Rails developer
+permalink: /designs/sunday-paper/
+sitemap: false
+classes: portfolio-home portfolio-paper portfolio-sunday
+---
+
+{% include portfolio/contrib-totals.html %}
+{% include portfolio/all-prs.html %}
+{%- assign now_months = site.time | date: '%Y' | times: 12 -%}
+{%- assign month = site.time | date: '%-m' | plus: 0 -%}
+{%- assign years = now_months | plus: month | minus: 24179 | divided_by: 12 -%}
+{%- assign cover_trip = site.data.trips | first -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap">
+
+<div class="paper sunday">
+  <header class="paper__masthead sunday__masthead">
+    <p class="paper__ears">
+      <span>Sunday edition</span>
+      <span>Vol. {{ years }} · No. {{ contrib_prs }}</span>
+      <span>Travel supplement inside</span>
+    </p>
+    <h1 class="sunday__name">The Sunday Commit</h1>
+    <p class="paper__dateline">
+      <span>{{ site.time | date: '%A, %-d %B %Y' }}</span>
+      <span>Pune, India</span>
+      <span>Est. 2014</span>
+    </p>
+    <nav class="sunday__sections">
+      <a href="#front">Front page</a><a href="#wire">Open source</a><a href="#travel">Travel</a><a href="#opinion">Opinion</a><a href="#careers">Careers</a>
+    </nav>
+  </header>
+
+  <section id="front" class="sunday__front">
+    <article class="sunday__lead">
+      <p class="paper__kicker">Rails 8.0 · Exclusive</p>
+      <h2 class="sunday__headline">LOCAL MAN FIXES IT UPSTREAM, AGAIN</h2>
+      <p class="paper__deck">{{ contrib_prs }} merged pull requests, {{ contrib_repos }} projects, and a page in Rails 8.0 that lists every TODO in your app.</p>
+      <div class="sunday__cols">
+        <p><span class="paper__drop">P</span>UNE. Deepak Mahakale has spent {{ years }} years building Ruby on Rails apps, and a good part of that time fixing the tools under them. The latest result, <a href="https://github.com/rails/rails/pull/49240">rails/rails#49240</a>, adds <code>/rails/info/notes</code> to every Rails 8.0 app.</p>
+        <p>The page shows the output of <code>bin/rails notes</code> in the browser, next to the routes page developers already know. The railties CHANGELOG credits him by name.</p>
+        <p>It is one of {{ rails_repo.prs.size }} pull requests he has had merged into Rails, and {{ spree_repo.prs.size }} into Spree. This paper understands his policy is simple: send a patch, not a complaint.</p>
+        <p>Mr. Mahakale is a Senior Software Developer at <a href="https://www.saeloun.com/">Saeloun</a>. He declined to comment beyond a link to his <a href="{{ '/resume.pdf' | relative_url }}">résumé</a>.</p>
+      </div>
+    </article>
+
+    <aside class="sunday__photo-week">
+      <p class="paper__label paper__label--rule">Photo of the week</p>
+      {% include portfolio/trip-photo.html trip=cover_trip class="trip--feature" %}
+      <div class="paper__box sunday__weather">
+        <p class="paper__label">Weather</p>
+        <p><strong>Rails:</strong> stable, 8.0 and rising</p>
+        <p><strong>Tech debt:</strong> scattered TODOs, now visible at <code>/rails/info/notes</code></p>
+        <p><strong>Stack Overflow:</strong> <span data-stat="so-reputation">21k+</span> and climbing</p>
+      </div>
+    </aside>
+  </section>
+
+  <section id="wire" class="paper__section">
+    <h3 class="paper__label paper__label--rule">Open source wire</h3>
+    <div class="sunday__wire">
+      {%- for row in all_prs limit: 10 -%}
+      {%- assign f = row | split: "|" -%}
+      {%- if f[2] == "49240" or f[2] == "52115" -%}{%- continue -%}{%- endif -%}
+      <article class="paper__brief">
+        <p class="paper__kicker">{{ f[1] | split: "/" | last }}</p>
+        <h4><a href="{{ f[4] }}">{{ f[3] }}</a></h4>
+        <p class="paper__fine">{{ f[1] }}#{{ f[2] }} · {{ f[0] | date: '%-d %b %Y' }}</p>
+      </article>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section id="travel" class="paper__section sunday__travel">
+    <header class="sunday__supplement">
+      <p class="paper__label">Supplement</p>
+      <h3>Travel</h3>
+      <p>Dispatches from wherever the laptop didn't come along.</p>
+    </header>
+    <div class="sunday__gallery">
+      {%- for trip in site.data.trips offset: 1 -%}
+      {% include portfolio/trip-photo.html trip=trip %}
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="paper__section paper__split">
+    <div id="opinion">
+      <h3 class="paper__label paper__label--rule">Opinion &amp; letters</h3>
+      <div class="writing__grid" data-feeds='[
+          {"name": "ror.tips", "key": "ror", "url": "https://ror.tips/feed.xml"},
+          {"name": "kamal.wiki", "key": "kamal", "url": "https://kamal.wiki/feed.xml"},
+          {"name": "Blog", "key": "blog", "url": "https://deepakmahakale.com/blog/feed.xml"}
+        ]' data-limit="4">
+        {%- for i in (1..4) -%}
+        <div class="writing__card writing__card--loading" aria-hidden="true">
+          <span class="writing__site"></span>
+          <span class="writing__title"></span>
+          <span class="writing__date"></span>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div id="careers">
+      <h3 class="paper__label paper__label--rule">Careers</h3>
+      {%- for job in site.data.experience -%}
+      <article class="paper__career">
+        <p class="paper__kicker">{{ job.from | slice: 0, 4 }}–{% if job.to == "Present" %}now{% else %}{{ job.to | slice: 0, 4 }}{% endif %}</p>
+        <h4><a href="{{ job.url }}">{{ job.role }}, {{ job.company }}</a></h4>
+      </article>
+      {%- endfor -%}
+
+      <div class="paper__box sunday__obit">
+        <p class="paper__label">Obituaries</p>
+        <p><strong>gem "generic_developer"</strong>, removed from the Gemfile. Survived by <a href="mailto:deepakmahakale@gmail.com">deepakmahakale@gmail.com</a>. In lieu of flowers, send interesting Rails problems.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="{{ '/assets/js/portfolio.js' | relative_url }}" defer></script>

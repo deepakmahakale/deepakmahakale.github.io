@@ -1,0 +1,12 @@
+{%- comment -%}
+  Sets all_prs: every merged PR as "date|repo|number|title|url", newest first.
+  Built as a string because Liquid can't sort an array of new hashes.
+{%- endcomment -%}
+{%- capture all_prs_raw -%}
+{%- for repo in site.data.contributions.repos -%}
+{%- for pr in repo.prs -%}
+{{ pr.merged }}|{{ repo.name }}|{{ pr.number }}|{{ pr.title | replace: "|", "/" }}|{{ pr.url }}@@
+{%- endfor -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign all_prs = all_prs_raw | split: "@@" | sort | reverse -%}
