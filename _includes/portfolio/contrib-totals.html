@@ -1,11 +1,8 @@
-{%- comment -%} Sets contrib_prs, contrib_repos, contrib_stars, rails_repo and spree_repo for the page {%- endcomment -%}
+{%- comment -%} Sets contrib_prs, contrib_repos, rails_repo and spree_repo for the page {%- endcomment -%}
 {%- assign contrib_prs = 0 -%}
-{%- assign contrib_stars = 0 -%}
 {%- for repo in site.data.contributions.repos -%}
   {%- assign contrib_prs = contrib_prs | plus: repo.prs.size -%}
-  {%- assign contrib_stars = contrib_stars | plus: repo.stars -%}
 {%- endfor -%}
 {%- assign contrib_repos = site.data.contributions.repos.size -%}
 {%- assign rails_repo = site.data.contributions.repos | where: "name", "rails/rails" | first -%}
 {%- assign spree_repo = site.data.contributions.repos | where: "name", "spree/spree" | first -%}
-{%- assign contrib_stars_k = contrib_stars | divided_by: 1000 -%}
