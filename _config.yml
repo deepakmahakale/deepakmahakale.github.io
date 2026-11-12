@@ -80,6 +80,9 @@ social:
   links: # An array of links to social media profiles
     - "https://twitter.com/deepakmahakale"
     - "https://www.facebook.com/deepakmahakale1"
+    - "https://github.com/deepakmahakale"
+    - "https://www.linkedin.com/in/deepakmahakale"
+    - "https://stackoverflow.com/users/4758119/deepak-mahakale"
 
 # Analytics
 analytics:
@@ -91,6 +94,7 @@ analytics:
 # Site Author
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
+  uri              : "https://deepakmahakale.com" # author URL in structured data
   avatar           : "/assets/images/profile_picture.png"
   bio              : "Senior Software Developer (Consultant) at Saeloun. Ruby on Rails, Kamal and open source."
   location         : "Pune, India"
