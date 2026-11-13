@@ -294,3 +294,9 @@ $site-colors: (
 
   &:hover { border-color: $hero-end; }
 }
+
+.referral__rewards {
+  padding-left: 1.2em;
+
+  li { margin-bottom: 0.25em; }
+}

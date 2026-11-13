@@ -2,8 +2,11 @@
 <div class="referral">
   {%- if page.summary %}<p class="referral__summary">{{ page.summary }}</p>{% endif -%}
 
-  {%- if page.benefit %}
-  <p class="referral__benefit"><strong>What you get:</strong> {{ page.benefit }}</p>
+  {%- if page.you_get or page.i_get %}
+  <ul class="referral__rewards">
+    {%- if page.you_get %}<li><strong>You get:</strong> {{ page.you_get }}</li>{% endif %}
+    {%- if page.i_get %}<li><strong>I get:</strong> {{ page.i_get }}</li>{% endif %}
+  </ul>
   {%- endif %}
 
   {%- if page.referral_code %}
@@ -25,6 +28,23 @@
     <li>{{ step }}</li>
     {%- endfor %}
   </ol>
+  {%- endif %}
+
+  {%- if page.terms %}
+  <h2>Terms</h2>
+  <ul>
+    {%- for term in page.terms %}
+    <li>{{ term }}</li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+
+  {%- if page.faq %}
+  <h2>FAQ</h2>
+  {%- for item in page.faq %}
+  <h3>{{ item.q }}</h3>
+  <p>{{ item.a }}</p>
+  {%- endfor %}
   {%- endif %}
 
   <p class="referral__note">
