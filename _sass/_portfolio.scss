@@ -238,3 +238,59 @@ $site-colors: (
     }
   }
 }
+
+/* Referrals (/referrals/ and _referrals/*.md)
+   ========================================================================== */
+
+.referral__summary { font-size: $type-size-4; }
+
+.referral__code {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75em;
+  margin: 1.5em 0;
+  padding: 1em 1.25em;
+  border: 1px dashed $hero-end;
+  border-radius: 8px;
+  background: mix(#fff, $hero-end, 94%);
+
+  code {
+    padding: 0.2em 0.5em;
+    font-size: $type-size-4;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+}
+
+.referral__label {
+  color: $muted-text-color;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.referral__note { color: $muted-text-color; }
+
+.referral-list {
+  display: grid;
+  gap: 1em;
+
+  @include breakpoint($medium) { grid-template-columns: repeat(2, 1fr); }
+}
+
+.referral-list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  padding: 1em 1.25em;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  color: $text-color;
+  text-decoration: none;
+
+  span { color: $muted-text-color; font-size: $type-size-6; }
+  code { align-self: flex-start; }
+
+  &:hover { border-color: $hero-end; }
+}

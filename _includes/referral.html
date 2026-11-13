@@ -1,0 +1,49 @@
+{%- comment -%} Renders a referral from the page's front matter (see _referrals/*.md) {%- endcomment -%}
+<div class="referral">
+  {%- if page.summary %}<p class="referral__summary">{{ page.summary }}</p>{% endif -%}
+
+  {%- if page.benefit %}
+  <p class="referral__benefit"><strong>What you get:</strong> {{ page.benefit }}</p>
+  {%- endif %}
+
+  {%- if page.referral_code %}
+  <div class="referral__code">
+    <span class="referral__label">Referral code</span>
+    <code id="referral-code">{{ page.referral_code }}</code>
+    <button type="button" class="btn btn--inverse btn--small" data-copy="#referral-code">Copy</button>
+  </div>
+  {%- endif %}
+
+  {%- if page.referral_link %}
+  <p><a class="btn btn--primary btn--large" href="{{ page.referral_link }}" rel="sponsored noopener" target="_blank">Sign up with my link</a></p>
+  {%- endif %}
+
+  {%- if page.steps %}
+  <h2>How to use it</h2>
+  <ol>
+    {%- for step in page.steps %}
+    <li>{{ step }}</li>
+    {%- endfor %}
+  </ol>
+  {%- endif %}
+
+  <p class="referral__note">
+    <small>
+      This is a referral link{% if page.referral_code %} and code{% endif %}. If you sign up with it, I may get a reward from {{ page.provider | default: "the provider" }}, at no extra cost to you.
+      Offers are set by {{ page.provider | default: "the provider" }} and can change{% if page.terms_url %}; see their <a href="{{ page.terms_url }}" rel="noopener" target="_blank">terms</a>{% endif %}.
+    </small>
+  </p>
+  <p><a href="{{ '/referrals/' | relative_url }}">← All referrals</a></p>
+</div>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var text = document.querySelector(button.dataset.copy).textContent.trim();
+      navigator.clipboard.writeText(text).then(function () {
+        button.textContent = 'Copied';
+        setTimeout(function () { button.textContent = 'Copy'; }, 1500);
+      });
+    });
+  });
+</script>
