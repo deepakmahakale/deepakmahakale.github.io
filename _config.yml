@@ -205,6 +205,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+  referrals:
+    output: true
+    permalink: /referrals/:path/
 
 # Defaults
 defaults:
@@ -264,6 +267,14 @@ defaults:
       layout: single
       author_profile: false
       share: true
+  # _referrals
+  - scope:
+      path: ""
+      type: referrals
+    values:
+      layout: single
+      author_profile: true
+      share: false
 
 
 # Sass/SCSS
@@ -288,6 +299,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -297,6 +309,7 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 
 # Archives
